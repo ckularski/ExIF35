@@ -1,0 +1,87 @@
+The ExIf35 XMP Namespace
+November 17, 2012
+----------------------------
+
+Abstract
+
+The ExIf35 namespace is the XMP namespace used by ExIf5 and its digital still
+camera counterpart, ExIfDSC. The namespace is primarily used to store values to
+an image file that is from a film camera, where exif and existing XMP 
+namespaces do not provide. 
+
+Discussion
+
+The namespace idenfier "ExIf35" was selected because it is not a generic term, 
+and can not be easily confused with other namespaces (not even XMP exif, which 
+uses lowercase "exif"). The namespace "Film" was considered briefly, but it was
+decided that using that namespace would potentially conflict with other spaces,
+since there is no mechanism for centrally registering XMP namespaces. 
+
+Fields
+	ExIf 35 utilizes the following fields
+
+	Roll 
+		[Integer]
+		Roll idenficiation number
+		
+	FilmUniqueID
+		[String]
+		Unique ID for roll, does not have to be numeric
+		
+	Film
+		[String]
+		Type of film image is recorded on
+		
+	DevelopSolution
+		[String]
+		Name of developer solution used
+
+	DevelopDuration
+		[String]
+		String of time (mm:ss) format for time film spent in developer bath
+		
+	DevelopDate
+		[String]
+		*Must be in exif date notation (YYYY:MM:DD)
+		Date the roll was developed
+		
+	DevelopmentTemperature
+		[String]
+		*" C" is appended for unit clarity
+		Temperature in degrees celsius at which the film was developed. 
+		
+	ExposureNumber
+		[Integer]
+		Frame number on roll. 
+		
+	SourceFileName	
+		[String]
+		File name and extension of original source file
+		
+	FileSource
+		[String]  {Digital Still Camera, Film Scanner, Reflected Image Scanner}
+		*Input must adhere to ExIf 0xA300 options
+		String representation of ExIf 0xA300 file source
+		
+	Filter
+		[String]
+		Name/type of filter in use
+		
+	ExposureMode
+		[String] {Auto, Manual, Auto Bracket, Continuous, Self-Timer}
+		*Input must be from exif 0xA402, or additional options provided
+		Text representation of the exposure/release mode used
+	
+	FocusMode
+		[String] {AF-S, AF-C, AF-A, M}
+		*Input must be selected from available options
+
+	Remarks
+		[String]
+		User remarks regarding the technical aspects of the photo, or subject notes
+		
+	
+
+
+
+ 

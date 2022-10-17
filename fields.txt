@@ -1,0 +1,221 @@
+Fields In Use
+ExIf 35
+As of November 17, 2012
+---------------------------
+	Fields are only written to if there is data to write to those fields.
+Fields are listed in the order in which they are written to the image files,
+which in general is roll information first, then individual frame information.
+Unless otherwise noted, all fields are recorded directly from user input.
+
+
+Fields Written
+==================
+ISO Speed
+  Sensitivity of the film or camera sensor
+	*Exif: 0x8827
+
+Exposure Index
+  Exposure index used for exposing image
+	*Exif: 0xA215
+		
+Author/Artist
+  The person who took the photo
+	*ExIf: 0x13B
+	*XMP: DC\Creator
+	
+Date Time Taken
+  The date and time the image was captured to the medium
+	*ExIf: 0x132
+	*ExIf: 0x9003
+	
+Date Time Digitized
+  The date and time the image was first stored electronically
+	#Time may be used from source file if not specified
+	*ExIf: 0x9004
+
+Exposure Program
+  Exposure program of the camera, also called exposure mode
+	*ExIf: 0x8822
+
+Scene Capture Type
+  Special camera setting for certain circumstances. Varies by make.
+	*ExIf: 0xA406
+	
+Metering Mode
+  Determines how the camera arrives at the exposure values.
+	*ExIf: 0x9207
+	
+Light Source
+  The source of light, used to determine white balance or image warmth
+	*ExIf: 0x9206
+
+Subject Distance Range
+  Where on the len's focus range the subject is. Distant is infinity.
+  Macro is greater than a 1:1 reproduction. 
+	*ExIf: 0xA40C
+
+Orientation
+  Direction image is to be rotated or flipped for proper display
+	*ExIf: 0x112
+
+Flash:
+  States if the flash was fired. 
+	*ExIf: 0x9209
+	
+Exposure Bias:
+  Positive or negative value stating the offset from the meter recommendations
+	*ExIf: 0x9204
+	
+Focal Length
+  The actual focal length of the lens for the image
+	*ExIf: 0x920A
+	*ExIf: 0xA405 (35mm equiv.)
+
+Aperture
+  The relative size of the lens opening used for the image
+	*ExIf: 0x9202
+	*ExIf: 0x829D
+
+Exposure Time
+  How long the shutter curtain was left open for the image
+	*ExIf: 0x829A
+
+Title
+  Image title, usually subject or other descriptive statement
+	*ExIf: 0x320
+	*ExIf: 0x10D
+
+Description
+  Description of the image, more verbose than a title. 
+	*ExIf: 0x10E
+	
+Camera Make
+  Company who built the camera
+	*ExIf: 0x10F
+
+Camera Model
+  Model of the camera (usually includes maker short name)
+	*ExIf: 0x0110
+
+Lens Maxmium Aperture
+  The smallest F-Number a lens is capable
+	*ExIf: 0x9205
+	
+Lens
+  Lens make, model, name and critical details
+	*XMP: MicrosoftPhoto\LensManufacturer
+	*XMP: MicrosoftPhoto\LensModel
+	*XMP: XMP\Lens
+	*XMP: AUX\LensID
+	*XMP: AUX\LensInfo
+
+Exposure Mode
+  Release mode for camera
+	*ExIf: 0xA402 (in normal range)
+	*XMP: ExIf35\ExposureMode (above normal range)
+
+Focus Mode
+  The type of focus system used for the image
+	*XMP: ExIf35\FocusMode
+	
+	
+Filter
+  Any filter or auxillary lens in use, such as polarizer or close-range
+	*XMP: ExIf35\Filter
+
+Software
+  Application that most recently wrote to the image
+	#Will always be "ExIf 35"
+	*ExIf: 0X131
+
+Film Info
+  Make and model of film image was recorded on
+	*ExIf: 0x9286 (user comment)
+	*IPTC: Caption
+	*XMP: Microsoft\System.Comment
+	*XMP: ExIf35\Film
+	
+
+File Source
+  How the image became digital
+	*ExIf: 0xA300
+	*XMP: Iptc4xmpExt\DigitalSourceType
+	*XMP: ExIf35\FileSource (uses A300 text values)
+	
+Source File Name
+  Original source file name
+	#Obtained from input file list
+	*XMP: ExIf35\SourceFileName
+
+Keywords\Tags
+  Keywords and tags that describe the image, used to aid in searches
+	*ExIf: 0x4747
+	*XMP: Microsoft\System.Keywords
+	*XMP: DC\Subject
+
+Roll Number
+  Counter value of the number of rolls shot/stored that will ID a specific role
+	*XMP: ExIf35\Roll
+
+Roll ID
+  A string value that identifies the roll, but is distinct. A roll serial 
+  number is appropriate in this field 
+	*XMP: ExIf35\FilmUniqueID
+
+Developer Solution
+  Chemical used for developing the film
+	*XMP: ExIf35\DevelopSolution
+
+Developer Duration
+  Amount of time media spent in chemical bath
+	*XMP: ExIf35\DevelopDuration
+
+Development Temperature
+  Temperature at which development was conducted and/or temperature of chemicals
+	*XMP: ExIf35\DevelopmentTemperature
+
+Develop Date
+  Date (in ExIf form) that the roll was inserted into the developing solution
+	*XMP: ExIf35\DevelopDate
+
+Exposure Number
+  Counter value of the number of the exposure on the roll. 
+	*XMP: ExIf35\ExposureNumber
+	
+Copyright
+  Author's copyright statement
+	*ExIf: 0x8298
+	*XMP: DC\Rights
+
+Contact Information
+  A variety of contact information for contacting the photographer
+	#From information entered in ExIf35
+	#Numerous fields match to numerous fields
+	#Information is only written at user request
+	*XMP: Photoshop\AuthorsPosition (title)
+	*XMP: Iptc4xmpCore\CreatorJobTitle (title)
+	*XMP: Iptc4xmpCore\CreatorAddress (address)
+	*XMP: Iptc4xmpCore\CreatorCity (city)
+	*XMP: Iptc4xmpCore\CreatorRegion (state/province)
+	*XMP: Iptc4xmpCore\CreatorPostalCode (postal code)
+	*XMP: Iptc4xmpCore\CreatorCountry (country)
+	*XMP: Iptc4xmpCore\CreatorWorkTelephone (phone)
+	*XMP: Iptc4xmpCore\CreatorWorkEmail (email)
+	*XMP: Iptc4xmpCore\CreatorWorkURL (web address)
+
+Remarks
+  Photograher remarks regarding subject or tehnical aspects.
+	#Freeform text field with no standard meaning or payload
+	*XMP: ExIf35\Remarks
+
+Notes
+	*Exif is the Exif space of the JPEG image file
+	*XMP is the Adobe XMP namespace
+	*Aux is the Photoshop Auxilary Namespace
+	*IPTC is original International Press Telecommunications Council fields
+	*Iptc4xmpCore is the XMP version of IPTC fields
+	*Iptc4xmpExt is the extension of IPTC Core for XMP
+	*DC is the Dublin Core XMP namespace
+	*ExIf35 (as a namespace) is the proprietary namespace of Exif35
+
+	

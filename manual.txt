@@ -1,0 +1,164 @@
+﻿ExIf 35 Operating Instructions
+Updated September 19, 2012
+by Curtis M. Kularski
+---------------------------------------
+This Manual Contains The Following Sections:
+	*Basic Operation
+	*Mating and Rotating
+	*Writing to Exif
+	*Expected Field Values
+	*Using for roll information only
+	*Merging Files
+	*Backing Up and Restoring Settings
+	*Reccomended Procedures
+
+Basic Operation
+	The first time you open ExIf 35, you will be in a blank roll file. You 
+should begin by entering information about the film, and also about the camera.
+You may also use the "Additional Information" menu to enter information about 
+yourself and the lenses you use with your camera (if you are using a changable
+lens camera). Once the basic information is entered, you may ensure that it is
+saved to the configuration by clicking the "Save Roll" button. 
+	As soon as the basic information is stored, you may begin adding your 
+images by selecting "Add Exposure" and entering the relevant information to the
+dialog that appears. Some fields that appear may not be relevant to you, or may
+be excessive for your needs. You may safely ignore those fields and leave them 
+as "Unknown" or blank. Most novices (and many professionals) will choose to
+completely ignore all of the fields on the right side of the box. 
+
+Mating and Rotation
+	If you know that your image files are not all aligned to the same orientation
+it is possible to load the files first before writing the ExIf data and specifying
+rotation data while viewing a thumbnail version of the image file. To do this, 
+click on Mate/Rotate and then drag your files into the box or select the directory
+in which the files exist. This will match your files to the exposures in the roll
+file. Once the files are mated with their roll entried you may click on a file to 
+force its thumbnail to appear in the left panel. Once it appears you may use the
+buttons below the tumbnail to rotate the image 90 degrees per turn. Once you click
+off of the exposure in the list the change of orientation will be saved in the 
+exposure entry of the roll. Once finished rotating images, close the Mating and
+Rotation panel. Save to roll to file to ensure that your changes will be reserved. 
+
+Writing to Exif
+	Once exposures are entered into the application, writing the information to
+the exif of a JPEG is as simple as clicking "Write ExIf", and either selecting 
+a folder, or dragging the files on to the panel, and then clicking "Write". You
+may opt to select additional features though, such as writing of copyright, 
+contact and other information on the file. You may also select the digitization
+method for the files to have that information recorded as well. The default 
+configuration will place your output files in the same folder as the source, 
+but with a different filename. You may keep this option or you may select to 
+overwrite the originals (completely safe for the image, but may overwrite 
+existing exif data) or you may select a new destination folder. 
+	If you make an error in adding files, click "Clear" and you will be able to
+try again. If you have one file that is problematic you may right-click it and
+choose "Set File" to manually select a single file to replace. 
+	If you wish to not set an image to an exposure, you may right-click that
+exposure's line and select "Skip". To reinstate the exposure, repeat the 
+procedure.
+	To mass load files, but to exclude a few from being written, load the batch
+that you intend to load, then right-click on the files that you wish to exclude
+and click "skip" on them. The file will not be used, and the exposure's 
+information will not be written to any file (except the roll file, of course).
+
+Expected Field Values
+	ExIf35 uses a lot of fields to record information. Fortunately most of them
+are selection boxes where the user must only choose the correct value. There 
+are, however, a few fields that require special attention. 
+
+	*Aperture - expects only a whole number, or a single decimal point. For 
+		example: "2.8" and "22" are both valid, but "f/2.8" and "F22" are not
+		accepted by the application. 
+	*Exposure Time - the time used for the exposure. The application will 
+		accept whole numbers for seconds (usually between 1 and 30), but it 
+		will also accept normal fractions such as 1/60 and 1/4000. Finally, 
+		while not the prefered format, the application will also accept decimal
+		seconds, such as 1.25 or a combination of the above, such as 1/1.25. 
+		The application will not accept any time designation characters such as
+		: or ". 
+	*Focal length - whole numbers used for focal length, usually marked on the 
+		lens body. Only whole numbers are accepted. 
+	*Exposure Bias - also called EV, or Exposure Compensation. The application 
+		will accept positive or negative values in this field (it is a signed
+		field). You may use either the decimal for rational form for this
+		number. The application must convert it to a rational for writing to a
+		file. 
+	*DateTime/DateTimeDigitized - This field must be formatted in complicance
+		with ExIf standards regarding time storage. The format is the four 
+		digit year, colon (:), two digit month, colon (:), two digit day, colon
+		(:), space, two-digit 24H hour (00 - 23), colon (:), two digit minute, 
+		colon (:), two digit second; or YYYY-mm-dd HH:mm:ss. The application 
+		uses text-box masking in the Windows version to help you keep this in 
+		order.
+	*DevelopDate - same as DateTime, except there is no time component. Format
+		is YYYY:mm:dd.
+	*Number - number is a field used by both the rolls and the exposures. This 
+		field is an arbitrary counter that is used for organization purposes 
+		for rolls, but to label frames on the roll for exposures. The only 
+		requirement for these fields is that it must be numeric. 
+	*Unique ID - the unique ID is a free-form string field, you may use any 
+		text or numeric value you wish to use, as long as it is unique between
+		rolls. 
+
+Using for roll information only
+	You may use ExIf35 for writing only roll information to files, ignoring the
+individual exposures. To do this procedure, create a new roll file and enter 
+its information. Then, from the "EXPOSURES" menu, add blank exposures. Enter
+the number of exposures that your roll contains. Click Add. Save your roll 
+file, then open the exif writing panel by clicking "Write EXIF".  
+
+Merging Files
+	With ExIf35 it is possible to combine two roll files into one. The most 
+common use of this functinality is in adding exposures from a file recorded on
+the mobile version of the application to the active file on the main 
+application. The main file will be the file that is open at the time of the 
+merging, and the subordinate file will be the file that is being added.
+	To merge two files, open the main file in the application. Once the file is
+loaded, from the "Roll" menu, select "Add Exposures From File". You will be 
+promted for the location of the file. Select the file and the exposures will be
+immediately added the the existing exposures in the application. Click "Save 
+Roll" to finalize the merge. Once you complete the merge it is safe to delete
+the subordinate file, to prevent it being confused with the main file. 
+
+Backing up and Restoring Your Settings
+	Adding information to an application such as ExIf35 can be tedious. For 
+that reason, ExIf 35 has a built in backup utility. You may backup your files
+by selecting "Backup Settings" from the "Utilities" menu. You must select a 
+bacup location, and then click "Backup". 
+	If you find yourself in a situation where you need to restore from a 
+backup, you will use the above procedure, except from the "Restore" tab. From 
+that tab, you will select your restore location. Don't worry if other files are
+in the same folder, ExIf35 will only copy files that belong to it (it checks 
+files with its manifest). You may also wish to utilize this portion of the 
+utility for copying your configuration between computers. 
+	If you do not have a backup of your configuration and the application 
+begins to operate in an undesired (or inconsistent) way, you may visit the 
+Backup utility to clean the main config file. You will find the utiltiy for
+this on the "Reset" tab. The original configuration is saved as "exif35.bak".
+If you must restore from the backup, it must be done manually. 
+	Finally, you may find it desirable to clean ALL configuration information
+from the application in an expedicious manner. This can occur if you neeed to 
+tag images on a client's computer, or otherwise are using a system that you 
+only temporarily have access to. This functionality, a kill switch, is located
+on the Backup Settings window on the "Kill" tab. Clicking "Kill Configuration"
+and then accepting the proceding dialog will erase all traces of configuration
+for the application. It is recomended that you make a backup to an external 
+device before you execute this procedure, as it has no undo function.  
+
+Recomended Procedures
+	The application imposes very few standards on its users, as every user 
+will have a different way of using the application, but the developer does have
+some suggestions for optimal use. 
+	*Backups - Once you have configured the application to your liking and have
+		added a few exposures, use the backup functionality and save your 
+		settings to an external storage device. It is recomended to update 
+		these backups whenever you make major changes to the config, or when 
+		there is a change to the configuration type of the application (this 
+		will be noted in the release notes of each build). 
+	* Naming - Rolls can be named anything, but it is recomended that you name
+		them by either the date they are loaded or the date they are finished.
+		This naming structure will help keep things organized. 
+	*Storage of files - While it is possible to place roll files anywhere, you
+		may wish to store them in a folder on your computer with a name such as
+		"My Film Info", or in the folder that contains/will contain the digital
+		version of the exposures (if any). 

@@ -1,0 +1,54 @@
+Importing from 'EXIF4FILM' Android Application
+ExIf 35
+May 29, 2013
+-----------------------------
+	As of this writing ExIf35 is a Windows-only software and does not 
+have a mobile counterpart on either the Android or iOS platforms. At the
+present time as an alternative it is suggested that users who have need
+of a mobile solution use the Android application 'EXIF4FILM' until such
+time as an Android counterpart of ExIf 35 can be wrtten. At the current
+time it is possible to use the XML output files of EXIF4FILM as input
+for roll files in ExIf35. 
+
+	Not all fields handled by an EXIF4FILM file are currently
+imported to ExIf 35. Key fields that are left out include geolocation
+data and roll load and unload dates and times. General information about
+each exposure and about the lens and filters used are transferred into
+the ExIf 35 roll. There are a few points that should be considered when
+importing the XML files though. 
+
+
+Exposure program, distance, metering and focus mode
+	*These values are not stored in EXIF4FILM and are therefore not
+	 imported to ExIf35.
+
+Title
+	*Description is used to house "subject" from EXIF4FILM. This
+	 value can be written to the final file by selecting it during
+	 the ExIf writing process. 
+
+Lens
+	*Lens data is based on name only. The name must match between
+	 EXIF4FILM and ExIf35 or else the data will not be stored in the
+	 image file correctly. 
+
+Filter
+	*Filter is a plain text field just as in ExIf35 and therefore
+	 does not rely on a special database match, but it is a good idea
+	 to make sure that both applications use the same name for
+ 	 consistency. 
+
+Film Load/Unload Times
+	*ExIf35 does not store film load/unload times. This will however
+	 be corrected in future revisions of the application and will at
+	 that time be imported from the EXIF4FILM files. 
+
+
+	Data that is recorded by ExIf35, but not imported from EXIF4FILM 
+may be manually entered on each exposure, or multple exposures may be
+selected and the user may enter data for all exposures at once using the
+appropriate option on the "Additional Information" menu in the main 
+dialog of the application. 
+
+ 
+

@@ -1,0 +1,15 @@
+﻿ExIf 35 Features
+February 14, 2016
+----------------------
+
+*Record vital information about film exposures
+*Basic informatin that is found in exif
+*Advanced film-only information stored
+*Add tags/keywords to exposure records
+*Store all exposures in files for their roll
+*Access all rolls from a central library
+*Write exposure information to scanned negatives/prints
+*Embed copyright information in image files
+*Backup/Restore settings with a build-in utility
+*Import data from EXIF4FILM Android App
+*Import data from Meta35 for Windows

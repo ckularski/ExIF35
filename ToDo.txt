@@ -1,0 +1,13 @@
+﻿ExIf 35
+To Do Items
+October 2, 2012
+----------------------------
+*Implement Geotag support from XML GPS file
+
+
+ExIf 35
+To Do Items
+April 29, 2010
+----------------------------
+*Finish moving translation functions from Form3 to ExIfPrep
+*Convert "ConfigMan" system to XML object
